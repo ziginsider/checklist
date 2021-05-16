@@ -43,7 +43,7 @@ body {
 }
 
 .main-wrapper {
-  /*width: 1024px;*/
+  width: 1024px;
   margin: 0 auto;
   position: relative;
 }
@@ -204,7 +204,7 @@ label {
 header {
   background: #fff;
   position: fixed;
-  width: 100%;
+  width: 1024px;
   z-index: 50;
   transition: all .2s ease-in;
   -webkit-transition: all .2s ease-in;
@@ -330,7 +330,7 @@ main {
 }
 
 .header {
-  width: 100%;
+  width: 1024px;
   height: 38px;
   text-align: right;
   position: fixed;
