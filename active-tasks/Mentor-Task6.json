@@ -1,0 +1,64 @@
+{
+  "taskName": "Task 6 Mentors checklist",
+  "information": "Dear mentor<br><br>This form helps you to check and evaluate Task6 Music App 🎵 https://github.com/rolling-scopes-school/RSShool2021-Android-task6-Music-App <br><br>You have to<br>1. check the projects of your students according to task6 conditions<br>2. provide code review to your students and share the best practices to solve these kinds of challenges<br>3. rate the student's work from 0 (nothing done) to *130* (perfect work + additonal requirements) and submit the score on https://app.rs.school/course/mentor/submit-review?course=android-2021 <br><br>If there are nuances that are not described in this form, interpret them by yourself (decreasing or increasing the score) at your discretion. Guide by common sense in this case 🙉",
+  "criteria": [
+    {
+      "type": "title",
+      "title": "👍 Task's criteria +100, additional requirements +30"
+    },
+    {
+      "type": "subtask", 
+      "text": "Tracks' data are read from JSON file. Parsing data from JSON is implemented.",
+      "max": 10
+    },
+    {
+      "type": "subtask",
+      "text": "Music is playing using URL from the parced data. At least \"Play\", \"Pause\", \"Play Previous\", \"Play Next\" controls are supported. Info about current track (title, author, album picture) are shown.",
+      "max": 30
+    },
+    {
+      "type": "subtask",
+      "text": "MediaStyle notification is supported.",
+      "max": 20
+    },
+    {
+      "type": "subtask", 
+      "text": "Rotation is supported. There are different layouts for portrait and landscape screen modes.",
+      "max": 20
+    },
+    {
+      "type": "subtask", 
+      "text": "MVP or MVVM architecture is implemented.",
+      "max": 20
+    },
+    {
+      "type": "subtask", 
+      "text": "ADDITIONAL: Dagger 2 or another DI is implemented.",
+      "max": 20
+    },
+    {
+      "type": "subtask", 
+      "text": "ADDITIONAL: AudioFocus support is implemented.",
+      "max": 10
+    },
+    {
+      "type": "title",
+      "title": "☝️ Penalties -30"
+    },
+    {
+      "type": "penalty",
+      "text": "Error-prone code (memory leaks, poor architecture style which leads to errors, etc.)",
+      "max": -10
+    },
+    {
+      "type": "penalty",
+      "text": "Messy and poor style of code:<br><br>abuse of !!, lateinit, etc.<br>poor variable naming<br>non-functional extra code<br>etc.",
+      "max": -10
+    },
+    {
+      "type": "penalty",
+      "text": "Some non-critical crashes during the work (during rotates, moves between screens, etc.)",
+      "max": -10
+    }
+  ]
+}
