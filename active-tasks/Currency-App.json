@@ -1,0 +1,64 @@
+{
+  "taskName": "2022-Currency App",
+  "information": "Dear task-checker<br><br>Thank you for your efforts and time!<br><br>You can find description of the task here https://github.com/ziginsider/CurrencyAppTask 💸<br><br>When you are checking the task, open the nedeed repo on github and clone it to check locally, run the project.<br><br>Iteratively go through the list of requirements below, testing it in the application and checking the appropriate radio buttons on the right side of the page. If you choose a partially completed option ('выполнено частично'), leave a comment using the 'Add Feedback' ('Добавить отзыв') button. You can also add feedback when choosing other options - it's up to you.<br><br>Only the requirements specified in the criteria list are checked. If some point is not described in the criteria, you have not to check it and have not to evaluate it.<br><br>All doubts are interpreted in favor of the student.<br><br>If the work is done more than it is required in the task, this is not a reason to reduce points.<br><br>If you are in doubt whether to reduce points or not, do not reduce. 🙉<br><br>To create a report of your checking use the button in the right-bottom of the page ('Показать отзыв'). Then you can copy it.",
+  "criteria": [
+    {
+      "type": "title",
+      "title": "👍 Task's criteria +100"
+    },
+    {
+      "type": "subtask", 
+      "text": "User can see a list of currencies on the main page. <b>RecyclerView</b> is used to provide the list.<br>Each item of the list should consist from icon of the currency, base name of the currency, description and rate (current currency base price)<br>User can tap on the rate field of any item, then:<br>- Choosen item is moved to the top of RecyclerView list<br>- User can enter new value in this rate field or edit the current rate<br>- Other currency rates is recalculated according to entered currency value and base rate value of every currency item. So, there is a currency exchange implementation.",
+      "max": 20
+    },
+    {
+      "type": "subtask",
+      "text": "Rates of currencies are refreshed every 5 seconds on the screen.<br>It is used REST API via <b>Retrofit</b> in the implementation to obtain JSON-data of current currencies. To get the data is used this endpoint https://us-central1-epam-laba-13-1527598553135.cloudfunctions.net/myWebsiteBackend/api/currency/ <br>It is used model of the data according to task description (date, rate and base) in the implementation. The obtained data are converted into kotlin-objects.<br>There is error handling in cases of internet connection issues or the api inaccessibility. In these cases an error message is shown on the screen to user.",
+      "max": 20
+    },
+    {
+      "type": "subtask",
+      "text": "<b>Dagger</b> is used as Dependency Injection library for the implementation. Dagger provides instance of Retrofit, OkHttpClient, lib for JSON parsing, etc. for using in ViewModel, Activity (Fragment), etc. Using Hilt is optional.",
+      "max": 20
+    },
+    {
+      "type": "subtask", 
+      "text": "<b>MVVM</b> with <b>ViewModel</b> is used as an architectural pattern in the implementation. The whole logic of the app keeps in the ViewModel and others domain classes which are provided to ViewModel. Views (Activity or Fragment) are only display the states what ViewModel provides into them.",
+      "max": 20
+    },
+    {
+      "type": "subtask", 
+      "text": "<b>Coroutines</b> and <b>Flow</b> are used to work with server requests and responses. ViewModel emits the data and View collect it.",
+      "max": 20
+    },
+    {
+      "type": "title",
+      "title": "☝️ Penalties -50"
+    },
+    {
+      "type": "penalty",
+      "text": "There are crashes during the work (during rotates, iteractions with app buttons, moves to background and back)",
+      "max": -10
+    },
+    {
+      "type": "penalty",
+      "text": "There are architectural patterns violations (god-classes, spaghetti-code, there are app logic in views, incorrect using of MVVM, etc.)",
+      "max": -10
+    },
+    {
+      "type": "penalty",
+      "text": "Messy and poor style of code (see https://developer.android.com/kotlin/style-guide)<br><br>abuse of !!, lateinit<br>poor variable naming<br>java is used instead of kotlin 🙈, etc.",
+      "max": -10
+    },
+    {
+      "type": "penalty",
+      "text": "There are redundant files, classes, functions, coments in the implementation - in other words there are non-functional extra code",
+      "max": -10
+    },
+    {
+      "type": "penalty",
+      "text": "There is too complex and suboptimal code that can be rewritten much more easily OR there is error-prone code which can lead to memory leaks and crashes OR there are other penalties which you can describe",
+      "max": -10
+    }
+  ]
+}
